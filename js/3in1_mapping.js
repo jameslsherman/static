@@ -135,6 +135,13 @@ function showDataTypeSubMenu(cell, posX, posY) {
 }
 
 // -----------------------------------------------------------------------------
+// Attach event listener to csvFileInput
+document.getElementById('csvFileInput').addEventListener('change', function() {
+    console.log("readAndDisplayCSV");
+    readAndDisplayCSV(); // This will be triggered when a file is selected
+});
+
+// -----------------------------------------------------------------------------
 // Function to handle right-click on "Data Type" cells
 document.addEventListener('DOMContentLoaded', function() {
     var tableBody = document.getElementById('csvTable').getElementsByTagName('tbody')[0];
